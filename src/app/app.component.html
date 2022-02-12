@@ -1,0 +1,13 @@
+<app-toolbar></app-toolbar>
+<div class="position-absolute top-50 start-50 translate-middle">
+  <div class="container-fluid" [style.width.px]="450" [style.maxWidth.vh]="60">
+    <mat-card
+      class="mat-elevation-z3 m-3 overflow-hidden"
+      [style.minHeight.px]="350"
+    >
+      <mat-card-content class="pt-3" [@routeAnimations]="prepareRoute(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
